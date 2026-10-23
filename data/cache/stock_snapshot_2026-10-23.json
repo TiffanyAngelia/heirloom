@@ -1,0 +1,897 @@
+{
+ "builtOn": "2026-10-23",
+ "economy": {
+  "cashRate": 0.035,
+  "inflationRate": 0.03,
+  "source": "Planning assumption (add FRED_API_KEY for live data)"
+ },
+ "stocks": {
+  "JNJ": {
+   "industry": "Healthcare",
+   "yahooFinance": {
+    "latestPrice": 267.61,
+    "fiveYearAnnualReturn": 0.1343,
+    "annualVolatility": 0.1796,
+    "worstFallFromPeak": -0.1841,
+    "dividendYield": 0.0197,
+    "movingAverage50": 264.96,
+    "movingAverage200": 243.44,
+    "distanceFrom200DayAverage": 0.0993,
+    "rsi14": 57.3,
+    "oneYearReturn": 0.4183,
+    "distanceFrom52WeekHigh": -0.0389
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 85159000000
+     },
+     {
+      "year": 2024,
+      "value": 88821000000
+     },
+     {
+      "year": 2025,
+      "value": 94193000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 35153000000
+     },
+     {
+      "year": 2024,
+      "value": 14066000000
+     },
+     {
+      "year": 2025,
+      "value": 26804000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0517,
+    "profitMargin": 0.2846,
+    "longTermDebt": 30651000000
+   }
+  },
+  "UNH": {
+   "industry": "Healthcare",
+   "yahooFinance": {
+    "latestPrice": 424.98,
+    "fiveYearAnnualReturn": 0.0069,
+    "annualVolatility": 0.3215,
+    "worstFallFromPeak": -0.6139,
+    "dividendYield": 0.0213,
+    "movingAverage50": 387.17,
+    "movingAverage200": 357.31,
+    "distanceFrom200DayAverage": 0.1894,
+    "rsi14": 72.3,
+    "oneYearReturn": 0.2069,
+    "distanceFrom52WeekHigh": -0.0201
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 371622000000
+     },
+     {
+      "year": 2024,
+      "value": 400278000000
+     },
+     {
+      "year": 2025,
+      "value": 447567000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 22381000000
+     },
+     {
+      "year": 2024,
+      "value": 14405000000
+     },
+     {
+      "year": 2025,
+      "value": 12056000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0974,
+    "profitMargin": 0.0269,
+    "longTermDebt": 72359000000
+   }
+  },
+  "ABBV": {
+   "industry": "Healthcare",
+   "yahooFinance": {
+    "latestPrice": 285.19,
+    "fiveYearAnnualReturn": 0.2576,
+    "annualVolatility": 0.2344,
+    "worstFallFromPeak": -0.2192,
+    "dividendYield": 0.0243,
+    "movingAverage50": 264.02,
+    "movingAverage200": 232.1,
+    "distanceFrom200DayAverage": 0.2287,
+    "rsi14": 65.7,
+    "oneYearReturn": 0.2844,
+    "distanceFrom52WeekHigh": -0.0135
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 54318000000
+     },
+     {
+      "year": 2024,
+      "value": 56334000000
+     },
+     {
+      "year": 2025,
+      "value": 61160000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 4863000000
+     },
+     {
+      "year": 2024,
+      "value": 4278000000
+     },
+     {
+      "year": 2025,
+      "value": 4226000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0611,
+    "profitMargin": 0.0691,
+    "longTermDebt": 64503000000
+   }
+  },
+  "PG": {
+   "industry": "Household goods",
+   "yahooFinance": {
+    "latestPrice": 165.59,
+    "fiveYearAnnualReturn": 0.0586,
+    "annualVolatility": 0.1843,
+    "worstFallFromPeak": -0.2377,
+    "dividendYield": 0.0259,
+    "movingAverage50": 148.03,
+    "movingAverage200": 147.18,
+    "distanceFrom200DayAverage": 0.1251,
+    "rsi14": 74.5,
+    "oneYearReturn": 0.12,
+    "distanceFrom52WeekHigh": 0.0
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2024,
+      "value": 84039000000
+     },
+     {
+      "year": 2025,
+      "value": 84284000000
+     },
+     {
+      "year": 2026,
+      "value": 87032000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2024,
+      "value": 14879000000
+     },
+     {
+      "year": 2025,
+      "value": 15974000000
+     },
+     {
+      "year": 2026,
+      "value": 16046000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0177,
+    "profitMargin": 0.1844
+   }
+  },
+  "KO": {
+   "industry": "Food & drink",
+   "yahooFinance": {
+    "latestPrice": 95.34,
+    "fiveYearAnnualReturn": 0.153,
+    "annualVolatility": 0.168,
+    "worstFallFromPeak": -0.1727,
+    "dividendYield": 0.022,
+    "movingAverage50": 88.76,
+    "movingAverage200": 80.67,
+    "distanceFrom200DayAverage": 0.1819,
+    "rsi14": 74.0,
+    "oneYearReturn": 0.3822,
+    "distanceFrom52WeekHigh": 0.0
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 45754000000
+     },
+     {
+      "year": 2024,
+      "value": 47061000000
+     },
+     {
+      "year": 2025,
+      "value": 47941000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 10714000000
+     },
+     {
+      "year": 2024,
+      "value": 10631000000
+     },
+     {
+      "year": 2025,
+      "value": 13107000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0236,
+    "profitMargin": 0.2734,
+    "longTermDebt": 36377000000
+   }
+  },
+  "PEP": {
+   "industry": "Food & drink",
+   "yahooFinance": {
+    "latestPrice": 138.83,
+    "fiveYearAnnualReturn": 0.005,
+    "annualVolatility": 0.1909,
+    "worstFallFromPeak": -0.3032,
+    "dividendYield": 0.0418,
+    "movingAverage50": 133.73,
+    "movingAverage200": 143.78,
+    "distanceFrom200DayAverage": -0.0344,
+    "rsi14": 69.2,
+    "oneYearReturn": -0.056,
+    "distanceFrom52WeekHigh": -0.1609
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 91471000000
+     },
+     {
+      "year": 2024,
+      "value": 91854000000
+     },
+     {
+      "year": 2025,
+      "value": 93925000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 9074000000
+     },
+     {
+      "year": 2024,
+      "value": 9578000000
+     },
+     {
+      "year": 2025,
+      "value": 8240000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0133,
+    "profitMargin": 0.0877,
+    "longTermDebt": 42321000000
+   }
+  },
+  "WMT": {
+   "industry": "Retail",
+   "yahooFinance": {
+    "latestPrice": 121.12,
+    "fiveYearAnnualReturn": 0.2089,
+    "annualVolatility": 0.2262,
+    "worstFallFromPeak": -0.2574,
+    "dividendYield": 0.0081,
+    "movingAverage50": 109.31,
+    "movingAverage200": 118.0,
+    "distanceFrom200DayAverage": 0.0264,
+    "rsi14": 74.4,
+    "oneYearReturn": 0.14,
+    "distanceFrom52WeekHigh": -0.0953
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 648125000000
+     },
+     {
+      "year": 2024,
+      "value": 680985000000
+     },
+     {
+      "year": 2025,
+      "value": 713163000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2018,
+      "value": 6670000000
+     },
+     {
+      "year": 2019,
+      "value": 14881000000
+     },
+     {
+      "year": 2020,
+      "value": 13510000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.049,
+    "profitMargin": 0.0189,
+    "longTermDebt": 33401000000
+   }
+  },
+  "HD": {
+   "industry": "Retail",
+   "yahooFinance": {
+    "latestPrice": 327.73,
+    "fiveYearAnnualReturn": 0.0004,
+    "annualVolatility": 0.2481,
+    "worstFallFromPeak": -0.3473,
+    "dividendYield": 0.0283,
+    "movingAverage50": 309.7,
+    "movingAverage200": 331.78,
+    "distanceFrom200DayAverage": -0.0122,
+    "rsi14": 71.6,
+    "oneYearReturn": -0.1336,
+    "distanceFrom52WeekHigh": -0.1437
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2007,
+      "value": 77349000000
+     },
+     {
+      "year": 2008,
+      "value": 71288000000
+     },
+     {
+      "year": 2009,
+      "value": 66176000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2018,
+      "value": 11121000000
+     },
+     {
+      "year": 2019,
+      "value": 11242000000
+     },
+     {
+      "year": 2020,
+      "value": 12866000000
+     }
+    ],
+    "revenueGrowthPerYear": -0.075,
+    "profitMargin": 0.1944,
+    "longTermDebt": 8707000000
+   }
+  },
+  "MCD": {
+   "industry": "Restaurants",
+   "yahooFinance": {
+    "latestPrice": 252.63,
+    "fiveYearAnnualReturn": 0.0365,
+    "annualVolatility": 0.1796,
+    "worstFallFromPeak": -0.3098,
+    "dividendYield": 0.0295,
+    "movingAverage50": 249.77,
+    "movingAverage200": 281.79,
+    "distanceFrom200DayAverage": -0.1035,
+    "rsi14": 66.2,
+    "oneYearReturn": -0.1644,
+    "distanceFrom52WeekHigh": -0.2448
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 25494000000
+     },
+     {
+      "year": 2024,
+      "value": 25920000000
+     },
+     {
+      "year": 2025,
+      "value": 26885000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2018,
+      "value": 5924300000
+     },
+     {
+      "year": 2019,
+      "value": 6025400000
+     },
+     {
+      "year": 2020,
+      "value": 4730500000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0269,
+    "profitMargin": 0.176,
+    "longTermDebt": 38424000000
+   }
+  },
+  "MSFT": {
+   "industry": "Technology",
+   "yahooFinance": {
+    "latestPrice": 521.08,
+    "fiveYearAnnualReturn": 0.1202,
+    "annualVolatility": 0.2822,
+    "worstFallFromPeak": -0.3715,
+    "dividendYield": 0.007,
+    "movingAverage50": 507.78,
+    "movingAverage200": 435.15,
+    "distanceFrom200DayAverage": 0.1975,
+    "rsi14": 50.5,
+    "oneYearReturn": 0.0093,
+    "distanceFrom52WeekHigh": -0.0412
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2008,
+      "value": 60420000000
+     },
+     {
+      "year": 2009,
+      "value": 58437000000
+     },
+     {
+      "year": 2010,
+      "value": 62484000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2019,
+      "value": 39240000000
+     },
+     {
+      "year": 2020,
+      "value": 44281000000
+     },
+     {
+      "year": 2021,
+      "value": 61271000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0169,
+    "profitMargin": 0.9806
+   }
+  },
+  "AAPL": {
+   "industry": "Technology",
+   "yahooFinance": {
+    "latestPrice": 348.22,
+    "fiveYearAnnualReturn": 0.1919,
+    "annualVolatility": 0.2804,
+    "worstFallFromPeak": -0.3336,
+    "dividendYield": 0.003,
+    "movingAverage50": 328.62,
+    "movingAverage200": 293.67,
+    "distanceFrom200DayAverage": 0.1858,
+    "rsi14": 64.8,
+    "oneYearReturn": 0.3523,
+    "distanceFrom52WeekHigh": 0.0
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2016,
+      "value": 215639000000
+     },
+     {
+      "year": 2017,
+      "value": 229234000000
+     },
+     {
+      "year": 2018,
+      "value": 265595000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 96995000000
+     },
+     {
+      "year": 2024,
+      "value": 93736000000
+     },
+     {
+      "year": 2025,
+      "value": 112010000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.1098,
+    "profitMargin": 0.4217
+   }
+  },
+  "JPM": {
+   "industry": "Banking",
+   "yahooFinance": {
+    "latestPrice": 336.54,
+    "fiveYearAnnualReturn": 0.1742,
+    "annualVolatility": 0.2429,
+    "worstFallFromPeak": -0.3864,
+    "dividendYield": 0.0183,
+    "movingAverage50": 344.75,
+    "movingAverage200": 319.7,
+    "distanceFrom200DayAverage": 0.0527,
+    "rsi14": 48.6,
+    "oneYearReturn": 0.1663,
+    "distanceFrom52WeekHigh": -0.0738
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 158104000000
+     },
+     {
+      "year": 2024,
+      "value": 177556000000
+     },
+     {
+      "year": 2025,
+      "value": 182447000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2018,
+      "value": 32474000000
+     },
+     {
+      "year": 2019,
+      "value": 36431000000
+     },
+     {
+      "year": 2020,
+      "value": 29131000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0742,
+    "profitMargin": 0.1597,
+    "longTermDebt": 249024000000
+   }
+  },
+  "NEE": {
+   "industry": "Utilities",
+   "yahooFinance": {
+    "latestPrice": 81.9,
+    "fiveYearAnnualReturn": 0.0214,
+    "annualVolatility": 0.2691,
+    "worstFallFromPeak": -0.4497,
+    "dividendYield": 0.0297,
+    "movingAverage50": 80.54,
+    "movingAverage200": 86.28,
+    "distanceFrom200DayAverage": -0.0508,
+    "rsi14": 62.3,
+    "oneYearReturn": 0.0171,
+    "distanceFrom52WeekHigh": -0.1508
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2010,
+      "value": 15317000000
+     },
+     {
+      "year": 2011,
+      "value": 15341000000
+     },
+     {
+      "year": 2012,
+      "value": 14256000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 7310000000
+     },
+     {
+      "year": 2024,
+      "value": 6946000000
+     },
+     {
+      "year": 2025,
+      "value": 6835000000
+     }
+    ],
+    "revenueGrowthPerYear": -0.0353,
+    "profitMargin": 0.4794,
+    "longTermDebt": 72385000000
+   }
+  },
+  "DUK": {
+   "industry": "Utilities",
+   "yahooFinance": {
+    "latestPrice": 125.4,
+    "fiveYearAnnualReturn": 0.0815,
+    "annualVolatility": 0.1806,
+    "worstFallFromPeak": -0.2416,
+    "dividendYield": 0.0341,
+    "movingAverage50": 118.91,
+    "movingAverage200": 122.69,
+    "distanceFrom200DayAverage": 0.0221,
+    "rsi14": 70.0,
+    "oneYearReturn": 0.006,
+    "distanceFrom52WeekHigh": -0.0439
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2010,
+      "value": 14272000000
+     },
+     {
+      "year": 2011,
+      "value": 14529000000
+     },
+     {
+      "year": 2012,
+      "value": 19624000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2023,
+      "value": 2841000000
+     },
+     {
+      "year": 2024,
+      "value": 4524000000
+     },
+     {
+      "year": 2025,
+      "value": 4968000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.1726,
+    "profitMargin": 0.2532,
+    "longTermDebt": 76340000000
+   }
+  },
+  "XOM": {
+   "industry": "Energy",
+   "yahooFinance": {
+    "latestPrice": 178.23,
+    "fiveYearAnnualReturn": 0.2703,
+    "annualVolatility": 0.2653,
+    "worstFallFromPeak": -0.2051,
+    "dividendYield": 0.0231,
+    "movingAverage50": 165.25,
+    "movingAverage200": 151.55,
+    "distanceFrom200DayAverage": 0.1761,
+    "rsi14": 70.4,
+    "oneYearReturn": 0.5988,
+    "distanceFrom52WeekHigh": -0.0042
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [],
+    "profitByYear": []
+   }
+  },
+  "VZ": {
+   "industry": "Telecoms",
+   "yahooFinance": {
+    "latestPrice": 45.2,
+    "fiveYearAnnualReturn": 0.0343,
+    "annualVolatility": 0.2297,
+    "worstFallFromPeak": -0.3838,
+    "dividendYield": 0.0623,
+    "movingAverage50": 47.02,
+    "movingAverage200": 45.31,
+    "distanceFrom200DayAverage": -0.0025,
+    "rsi14": 49.7,
+    "oneYearReturn": 0.2113,
+    "distanceFrom52WeekHigh": -0.1078
+   },
+   "finnhub": {},
+   "secFilings": {
+    "revenueByYear": [
+     {
+      "year": 2023,
+      "value": 133974000000
+     },
+     {
+      "year": 2024,
+      "value": 134788000000
+     },
+     {
+      "year": 2025,
+      "value": 138191000000
+     }
+    ],
+    "profitByYear": [
+     {
+      "year": 2018,
+      "value": 15528000000
+     },
+     {
+      "year": 2019,
+      "value": 19265000000
+     },
+     {
+      "year": 2020,
+      "value": 17801000000
+     }
+    ],
+    "revenueGrowthPerYear": 0.0156,
+    "profitMargin": 0.1288,
+    "longTermDebt": 89658000000
+   }
+  }
+ },
+ "funds": {
+  "BIL": {
+   "latestPrice": 91.6,
+   "fiveYearAnnualReturn": 0.0371,
+   "annualVolatility": 0.0026,
+   "worstFallFromPeak": -0.0005,
+   "dividendYield": 0.0366,
+   "movingAverage50": 91.29,
+   "movingAverage200": 90.33,
+   "distanceFrom200DayAverage": 0.0141,
+   "rsi14": 94.5,
+   "oneYearReturn": 0.0366,
+   "distanceFrom52WeekHigh": 0.0
+  },
+  "SHY": {
+   "latestPrice": 81.52,
+   "fiveYearAnnualReturn": 0.0194,
+   "annualVolatility": 0.0202,
+   "worstFallFromPeak": -0.0539,
+   "dividendYield": 0.0362,
+   "movingAverage50": 81.26,
+   "movingAverage200": 81.06,
+   "distanceFrom200DayAverage": 0.0057,
+   "rsi14": 68.4,
+   "oneYearReturn": 0.0165,
+   "distanceFrom52WeekHigh": -0.0009
+  },
+  "TIP": {
+   "latestPrice": 106.33,
+   "fiveYearAnnualReturn": -0.0003,
+   "annualVolatility": 0.0622,
+   "worstFallFromPeak": -0.1451,
+   "dividendYield": 0.0443,
+   "movingAverage50": 105.79,
+   "movingAverage200": 106.93,
+   "distanceFrom200DayAverage": -0.0056,
+   "rsi14": 66.6,
+   "oneYearReturn": -0.0108,
+   "distanceFrom52WeekHigh": -0.0178
+  },
+  "BND": {
+   "latestPrice": 71.36,
+   "fiveYearAnnualReturn": -0.0014,
+   "annualVolatility": 0.0607,
+   "worstFallFromPeak": -0.1738,
+   "dividendYield": 0.0412,
+   "movingAverage50": 71.01,
+   "movingAverage200": 71.84,
+   "distanceFrom200DayAverage": -0.0066,
+   "rsi14": 65.7,
+   "oneYearReturn": -0.0105,
+   "distanceFrom52WeekHigh": -0.0247
+  },
+  "VIG": {
+   "latestPrice": 245.12,
+   "fiveYearAnnualReturn": 0.1034,
+   "annualVolatility": 0.1413,
+   "worstFallFromPeak": -0.2039,
+   "dividendYield": 0.0149,
+   "movingAverage50": 239.54,
+   "movingAverage200": 230.25,
+   "distanceFrom200DayAverage": 0.0646,
+   "rsi14": 70.2,
+   "oneYearReturn": 0.1519,
+   "distanceFrom52WeekHigh": -0.0021
+  },
+  "VT": {
+   "latestPrice": 156.52,
+   "fiveYearAnnualReturn": 0.1008,
+   "annualVolatility": 0.1623,
+   "worstFallFromPeak": -0.2638,
+   "dividendYield": 0.0154,
+   "movingAverage50": 159.41,
+   "movingAverage200": 151.74,
+   "distanceFrom200DayAverage": 0.0315,
+   "rsi14": 41.6,
+   "oneYearReturn": 0.149,
+   "distanceFrom52WeekHigh": -0.0337
+  },
+  "AOK": {
+   "latestPrice": 40.6,
+   "fiveYearAnnualReturn": 0.0337,
+   "annualVolatility": 0.0722,
+   "worstFallFromPeak": -0.1893,
+   "dividendYield": 0.035,
+   "movingAverage50": 40.74,
+   "movingAverage200": 40.37,
+   "distanceFrom200DayAverage": 0.0057,
+   "rsi14": 52.4,
+   "oneYearReturn": 0.0396,
+   "distanceFrom52WeekHigh": -0.0175
+  },
+  "AOM": {
+   "latestPrice": 48.79,
+   "fiveYearAnnualReturn": 0.0435,
+   "annualVolatility": 0.0828,
+   "worstFallFromPeak": -0.1996,
+   "dividendYield": 0.0317,
+   "movingAverage50": 49.06,
+   "movingAverage200": 48.33,
+   "distanceFrom200DayAverage": 0.0096,
+   "rsi14": 49.3,
+   "oneYearReturn": 0.0555,
+   "distanceFrom52WeekHigh": -0.0197
+  },
+  "AOR": {
+   "latestPrice": 68.36,
+   "fiveYearAnnualReturn": 0.064,
+   "annualVolatility": 0.1068,
+   "worstFallFromPeak": -0.2172,
+   "dividendYield": 0.0266,
+   "movingAverage50": 69.01,
+   "movingAverage200": 67.2,
+   "distanceFrom200DayAverage": 0.0173,
+   "rsi14": 45.2,
+   "oneYearReturn": 0.0875,
+   "distanceFrom52WeekHigh": -0.0245
+  }
+ }
+}

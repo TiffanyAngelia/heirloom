@@ -1,0 +1,37 @@
+# Weekly update every Monday morning, plus a weekday alert check.
+# Add your keys in GitHub: Settings → Secrets and variables → Actions.
+# Note: profiles are read from data/users/, so commit the demo profiles you want emailed.
+name: Heirloom notifications
+
+on:
+  schedule:
+    - cron: "31 7 * * 1"      # Mondays 07:31 UTC (08:31 London summer time)
+    - cron: "17 8 * * 2-5"    # Tue–Fri 08:17 UTC: alerts only
+  workflow_dispatch:           # "Run workflow" button for the demo
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Send updates
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          if [ "${{ github.event.schedule }}" = "17 8 * * 2-5" ]; then
+            python weekly_digest.py --alerts
+          else
+            python weekly_digest.py
+          fi
