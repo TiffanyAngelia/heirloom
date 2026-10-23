@@ -8,7 +8,7 @@ They use three well-known indicators, explained in plain English to the client:
   - RSI (0–100): how fast the price has moved lately; under 35 = fallen fast,
     over 70 = risen fast
   - Drift: how far a pot has moved away from the plan (rebalancing is the
-    safest, best-evidenced "buy low, sell high" habit for retirees)
+    safest, best-evidenced "buy low, sell high" habit for retirees).
 """
 
 from datetime import date
