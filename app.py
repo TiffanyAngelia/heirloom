@@ -29,6 +29,7 @@ from updates import buildUpdates
 from users import addToInbox, loadProfile, saveProfile
 
 st.set_page_config(page_title="Heirloom", page_icon="🌳", layout="centered")
+ui.fixDollarSigns()
 ui.applyTheme()
 
 POT_ICONS = {POT_SAFETY: "🛡️", POT_CORE: "🌍", POT_SHARES: "🤖"}

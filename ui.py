@@ -266,7 +266,9 @@ def speakButton(text: str, key: str, rate: float = 0.95, label: str = "🔊 List
     import streamlit.components.v1 as components
     cleanText = jsonModule.dumps(text.replace("*", "").replace("#", "").replace("_", " "))
     components.html(f"""
-      <button id="speak{key}" style="font: 600 16px Inter, sans-serif; padding: 11px 14px; width: 100%;
+      <style>html, body {{ margin: 0; padding: 0; overflow: hidden; background: transparent; }}</style>
+      <button id="speak{key}" style="font: 600 16px -apple-system, Inter, sans-serif; padding: 11px 14px;
+        width: calc(100% - 6px); margin: 3px; box-sizing: border-box; -webkit-appearance: none;
         border-radius: 999px; border: 1.5px solid #D5E6DC; background: white; color: {DEEP_GREEN}; cursor: pointer">
         {label}</button>
       <script>
@@ -278,7 +280,7 @@ def speakButton(text: str, key: str, rate: float = 0.95, label: str = "🔊 List
           speech.onend = () => button.innerText = "{label}";
           button.innerText = "⏹ Stop"; speechSynthesis.speak(speech);
         }};
-      </script>""", height=54)
+      </script>""", height=56)
 
 
 def timeline(events: list):
@@ -288,3 +290,55 @@ def timeline(events: list):
         f"<div class='timelineDetail'>{escape(event['date'])}{' · ' + escape(event['detail']) if event.get('detail') else ''}"
         f"</div></div></div>" for event in events)
     st.markdown(f"<div class='tileCard'>{rows}</div>", unsafe_allow_html=True)
+
+
+def escapeMoney(text):
+    """'$100 to $80' would render as a maths formula in Streamlit; escape every $."""
+    if not isinstance(text, str):
+        return text
+    return text.replace("\\$", "$").replace("$", "\\$")
+
+
+def fixDollarSigns():
+    """Make every Streamlit text element show $ amounts literally, everywhere in the app
+    (labels, buttons, messages, AI answers) instead of turning '$100 ... $80' into maths."""
+    import functools
+
+    from streamlit.delta_generator import DeltaGenerator
+
+    if getattr(DeltaGenerator, "_heirloomMoneyFix", False):
+        return
+
+    def wrapTextFirst(method, isBound):
+        @functools.wraps(method)
+        def wrapper(*args, **kwargs):
+            args = list(args)
+            textIndex = 0 if isBound else 1
+            if len(args) > textIndex:
+                if kwargs.get("unsafe_allow_html") and isinstance(args[textIndex], str):
+                    args[textIndex] = args[textIndex].replace("$", "&#36;")
+                else:
+                    args[textIndex] = escapeMoney(args[textIndex])
+            return method(*args, **kwargs)
+        return wrapper
+
+    def wrapWrite(method, isBound):
+        @functools.wraps(method)
+        def wrapper(*args, **kwargs):
+            firstText = 0 if isBound else 1
+            args = [escapeMoney(value) if index >= firstText and not kwargs.get("unsafe_allow_html") else value
+                    for index, value in enumerate(args)]
+            return method(*args, **kwargs)
+        return wrapper
+
+    textFirstNames = ["markdown", "caption", "info", "success", "warning", "error", "expander", "button",
+                      "link_button", "toggle", "checkbox", "radio", "selectbox", "segmented_control",
+                      "multiselect", "number_input", "text_input", "text_area", "download_button"]
+    for name in textFirstNames:
+        if hasattr(DeltaGenerator, name):
+            setattr(DeltaGenerator, name, wrapTextFirst(getattr(DeltaGenerator, name), isBound=False))
+        if hasattr(st, name):
+            setattr(st, name, wrapTextFirst(getattr(st, name), isBound=True))
+    DeltaGenerator.write = wrapWrite(DeltaGenerator.write, isBound=False)
+    st.write = wrapWrite(st.write, isBound=True)
+    DeltaGenerator._heirloomMoneyFix = True
