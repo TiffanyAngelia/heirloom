@@ -109,11 +109,27 @@ def sendEmail(toAddress: str, subject: str, htmlBody: str, textBody: str):
     message["To"] = toAddress
     message.attach(MIMEText(textBody, "plain"))
     message.attach(MIMEText(htmlBody, "html"))
-    try:
-        with smtplib.SMTP(os.getenv("SMTP_HOST"), int(os.getenv("SMTP_PORT", "587")), timeout=20) as server:
-            server.starttls()
-            server.login(os.getenv("SMTP_USER"), os.getenv("SMTP_PASSWORD"))
-            server.send_message(message)
-        return True, f"Sent to {toAddress}"
-    except Exception as error:
-        return False, f"Email failed: {error}"
+    host = os.getenv("SMTP_HOST")
+    user = os.getenv("SMTP_USER")
+    password = os.getenv("SMTP_PASSWORD", "").replace(" ", "")  # Gmail shows app passwords with spaces
+    preferredPort = int(os.getenv("SMTP_PORT", "587"))
+    lastError = None
+    # Some Wi-Fi networks block one email port, so try the other one too.
+    for port in dict.fromkeys([preferredPort, 465, 587]):
+        try:
+            if port == 465:
+                server = smtplib.SMTP_SSL(host, port, timeout=15)
+            else:
+                server = smtplib.SMTP(host, port, timeout=15)
+                server.starttls()
+            with server:
+                server.login(user, password)
+                server.send_message(message)
+            return True, f"Sent to {toAddress}"
+        except smtplib.SMTPAuthenticationError:
+            return False, ("Gmail rejected the login. Use a 16-letter App password "
+                           "(Google Account → Security → App passwords), not your normal password.")
+        except Exception as error:
+            lastError = error
+    return False, (f"Email failed: {lastError}. This Wi-Fi may be blocking email; "
+                   "try a phone hotspot.")
