@@ -152,8 +152,8 @@ def askModelForPicks(snapshot, scores, clientProfile, amount, limits):
     apiKey = os.getenv("OPENAI_API_KEY")
     if not apiKey:
         return None, "No OPENAI_API_KEY set"
-    from openai import OpenAI
-    client = OpenAI(api_key=apiKey, base_url=os.getenv("OPENAI_BASE_URL") or None, timeout=90)
+    from ai_client import makeClient
+    client = makeClient(timeout=90)
 
     userMessage = (
         f"CLIENT: {clientProfile}\n"

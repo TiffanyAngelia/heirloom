@@ -40,8 +40,8 @@ def getClient():
     apiKey = os.getenv("OPENAI_API_KEY")
     if not apiKey:
         return None
-    from openai import OpenAI
-    return OpenAI(api_key=apiKey, base_url=os.getenv("OPENAI_BASE_URL") or None, timeout=60)
+    from ai_client import makeClient
+    return makeClient(timeout=60)
 
 
 def askModel(userMessage: str, useQuickModel=False, model=None):
